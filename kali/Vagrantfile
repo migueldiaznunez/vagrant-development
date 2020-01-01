@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     vb.default_nic_type = "82540EM"
     vb.gui = false
-    vb.cpus = 4
+    vb.cpus = 2
     vb.memory = "8192"
     vb.customize ["modifyvm", :id, "--usb", "on"]
     vb.customize ['usbfilter', 'add', '0', '--target', :id, '--name', 'ALFA', '--vendorid', '0x148f', '--productid', '0x3070']
